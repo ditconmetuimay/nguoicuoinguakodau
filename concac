@@ -1,0 +1,13 @@
+game:GetService("Players").LocalPlayer.Character.Humanoid.Died:connect(function()
+
+while wait() do
+pcall(function()
+game.Players.LocalPlayer.Character.Head.Transparency = 1
+    for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+        if (v:IsA("Decal")) then
+            v:Destroy()
+        end
+    end
+end)
+end
+end)
